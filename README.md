@@ -1,10 +1,11 @@
 # jsonForm
 
 
-#####usage
-```
+##### usage
+
+```javascript 1.8
     //example data
-    var data = {
+    let data = {
         primitives: {
             number: 12,
             string: "Test string",
@@ -18,7 +19,7 @@
     /**
     *   jsonForm(HTMLElement container, Object data, [object options])
     **/
-    var form = new jsonForm($("body")[0], data, {
+    let form = new jsonForm($("body")[0], data, {
         meta: {
             selectMe: {
                 type: "select",
@@ -29,8 +30,9 @@
 ```
 
 
-#####define custom types
-```    
+##### define custom types
+
+```javascript 1.8
     jsonFormRegisterType("select", function(meta, key, data, parent, path){
        if (!meta.options) {
            console.error("type 'select' needs options");
