@@ -51,6 +51,7 @@
                     case 'string':
                     case 'number':
                         label = document.createElement('label');
+                        label.setAttribute("name", key);
                         span = document.createElement('span');
                         span.innerHTML = key;
                         input = document.createElement('input');
@@ -68,7 +69,7 @@
                         break;
                     case 'boolean':
                         label = document.createElement('label');
-                        // label.setAttribute("for", "string");
+                        label.setAttribute("name", key);
                         span = document.createElement('span');
                         span.innerHTML = key;
                         input = document.createElement('input');
