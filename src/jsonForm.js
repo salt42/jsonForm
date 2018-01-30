@@ -242,4 +242,47 @@
     }, function(element) {
         return element.value;
     });
+    jsonFormRegisterType("select", function(meta, key, data, parent, path){
+        if (!meta.options) {
+            console.error("type 'select' needs options");
+            return;
+        }
+        let label = document.createElement('label');
+        let span = document.createElement('span');
+        span.innerHTML = key;
+        let select = document.createElement('select');
+        select.dataset.name = key;
+        select.dataset.type = 'select';
+        select.setAttribute("name", key);
+        for (let i = 0; i < meta.options.length; i++) {
+            let option = document.createElement('option');
+            option.innerHTML = meta.options[i];
+            option.setAttribute("value", meta.options[i]);
+            select.appendChild(option);
+        }
+        select.value = data[key];
+
+        label.appendChild(span);
+        label.appendChild(select);
+        parent.appendChild(label);
+    }, function(element) {
+        return element.value;
+    });
+    jsonFormRegisterType("hidden", function(meta, key, data, parent, path){
+        let label = document.createElement('label');
+        label.classList.add("hidden");
+        let span = document.createElement('span');
+        span.innerHTML = key;
+        let input = document.createElement('input');
+        input.dataset.name = key;
+        input.dataset.type = 'hidden';
+        input.setAttribute("type", "hidden");
+        input.setAttribute("name", key);
+        input.value = data[key];
+        label.appendChild(span);
+        label.appendChild(input);
+        parent.appendChild(label);
+    }, function(element) {
+        return element.value;
+    });
 })();
