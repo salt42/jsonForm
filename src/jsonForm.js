@@ -189,6 +189,7 @@
             container.innerHTML = "";
             let fragment = document.createDocumentFragment();
             let form = document.createElement('form');
+            form.classList.add("json-form");
             let fieldset = document.createElement('fieldset');
             fieldset.dataset.name = conf.name || "root";
             fieldset.dataset.type = "object";

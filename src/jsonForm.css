@@ -1,14 +1,9 @@
-/*region vars*/
-:root {
-    --color: #000;
-}
-
-/*endregion vars*/
 /*region form*/
-form {
+form.json-form {
+    --color: #000;
     /*overflow: auto;*/
 }
-fieldset {
+form.json-form fieldset {
     background-color: rgba(0, 0, 0, 0.15);
     border: 2px solid #217dbb;
     border-width: 2px 0 0 0;
@@ -18,7 +13,7 @@ fieldset {
     /*padding-top: 10px;*/
     padding: 0 0 10px 5px;
 }
-fieldset > legend {
+form.json-form fieldset > legend {
     font-size: 0.8em;
     font-weight: bold;
     font-family: Bahnschrift;
@@ -31,7 +26,7 @@ fieldset > legend {
     /*padding: 0;*/
     /*margin-left: -50px;*/
 }
-label {
+form.json-form label {
     display: flex;
     align-items: center;
     width: 98%;
@@ -41,14 +36,14 @@ label {
     border-width: 0 0 1px 0;
     justify-content: space-between;
 }
-label > span {
+form.json-form label > span {
     float: left;
     font-size: 0.7em;
 }
-label > input {
+form.json-form label > input {
     float: right;
 }
-input {
+form.json-form input {
     color: var(--color);
     background-color: rgba(255, 242, 189, 0.11);
     border: 0px;
@@ -59,7 +54,7 @@ input {
     font-size: 0.7em;
     width: 120px;
 }
-select {
+form.json-form select {
     color: var(--color);
     background-color: rgba(255, 242, 189, 0.11);
     border: 0px;
@@ -70,7 +65,7 @@ select {
     font-size: 0.7em;
     width: 126px;
 }
-ul {
+form.json-form ul {
     list-style: none;
     padding: 0px;
 }
